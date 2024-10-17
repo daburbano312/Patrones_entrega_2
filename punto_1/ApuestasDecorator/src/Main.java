@@ -8,14 +8,13 @@ import src.interfaces.Apuesta;
 
 public class Main {
     public static void main(String[] args) {
-        // Crear una apuesta simple
+        
         Apuesta apuestaSimple = new ApuestaSimple("Fútbol", 100, 2.0);
         System.out.println(apuestaSimple.getDescripcion());
         System.out.println("Ganancia: $" + apuestaSimple.calcularGanancia());
 
         System.out.println("\n---\n");
 
-        // Decorar con bono
         Apuesta apuestaConBono = new ApuestaConBono(apuestaSimple, 0.1);
         System.out.println(apuestaConBono.getDescripcion());
         System.out.println("Ganancia: $" + apuestaConBono.calcularGanancia());
